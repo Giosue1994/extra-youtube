@@ -10,5 +10,120 @@
 
 body {
   font-family: "Roboto", sans-serif;
+  color: #fff;
+  background-color: #181818;
+}
+
+.container {
+  padding: 0 30px;
+}
+
+.flex {
+  display: flex;
+}
+
+img {
+  display: block;
+  width: 100%;
+}
+
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+nav .container {
+  height: 62px;
+  background-color: rgba(33, 33, 33, 0.9);
+  align-items: center;
+  justify-content: space-between;
+}
+
+nav .container .logo .stretched-menu i {
+  font-size: 20px;
+  cursor: pointer;
+}
+
+nav .container .logo img {
+  width: 88px;
+  margin-left: 30px;
+}
+
+nav .container .logo .lang-it {
+  color: #909090;
+  font-size: 12px;
+  position: relative;
+  top: -4px;
+  right: -5px;
+}
+
+nav .container .search-bar {
+  width: 40%;
+}
+
+nav .container .search-bar input {
+  width: 100%;
+  font-size: 18px;
+  padding: 5px 15px;
+  border: 1px solid #323232;
+  box-shadow: none;
+  background-color: #121212;
+  font-family: "Roboto", sans-serif;
+  color: #fff;
+}
+
+nav .container .search-bar input:focus {
+  outline: 1px solid #065fd4;
+}
+
+nav .container .search-bar .lens {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 15px;
+  padding: 5px 30px;
+  background-color: #323232;
+  color: #6a6565;
+  cursor: pointer;
+}
+
+nav .container .search-bar .lens:hover {
+  color: #909090;
+}
+
+nav .container .options .list-options {
+  list-style-type: none;
+  align-items: center;
+}
+
+nav .container .options .list-options li {
+  font-size: 20px;
+  margin-left: 30px;
+  position: relative;
+  cursor: pointer;
+}
+
+nav .container .options .list-options li .fa-plus {
+  position: absolute;
+  top: 5px;
+  left: 2.5px;
+  color: #181818;
+  font-size: 12px;
+}
+
+nav .container .options .list-options .profile {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 35px;
+  height: 35px;
+  background-color: #ff6600;
+  border-radius: 50%;
+}
+
+nav .container .options .list-options .profile:active {
+  border: 1px solid #065fd4;
 }
 

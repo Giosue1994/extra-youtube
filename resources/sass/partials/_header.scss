@@ -1,4 +1,103 @@
 // HEADER
-header {
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
 
+  .container {
+    height: 62px;
+    background-color: rgba(33, 33, 33, 0.9);
+    align-items: center;
+    justify-content: space-between;
+
+    .logo {
+      .stretched-menu {
+        i {
+          font-size: $icon_size;
+          cursor: pointer;
+        }
+      }
+
+      img {
+        width: 88px;
+        margin-left: 30px;
+      }
+
+      .lang-it {
+        color: $secondary_text_color;
+        font-size: 12px;
+        position: relative;
+        top: -4px;
+        right: -5px;
+      }
+    }
+
+    .search-bar {
+      width: 40%;
+
+      input {
+        width: 100%;
+        font-size: 18px;
+        padding: 5px 15px;
+        border: 1px solid #323232;
+        box-shadow: none;
+        background-color: #121212;
+        font-family: 'Roboto', sans-serif;
+        color: $prymary_text_color;
+
+        &:focus {
+          outline: 1px solid #065fd4;
+        }
+      }
+
+      .lens {
+        @include center_element;
+        font-size: 15px;
+        padding: 5px 30px;
+        background-color: #323232;
+        color: #6a6565;
+        cursor: pointer;
+
+        &:hover {
+          color: $secondary_text_color;
+        }
+      }
+
+    }
+
+    .options {
+      .list-options {
+        list-style-type: none;
+        align-items: center;
+
+        li {
+          font-size: $icon_size;
+          margin-left: 30px;
+          position: relative;
+          cursor: pointer;
+
+          .fa-plus {
+            position: absolute;
+            top: 5px;
+            left: 2.5px;
+            color: $bg_main_color;
+            font-size: 12px;
+          }
+
+        }
+        .profile {
+          @include center_element;
+          width: 35px;
+          height: 35px;
+          background-color: #ff6600;
+          border-radius: 50%;
+
+          &:active {
+            border: 1px solid #065fd4;
+          }
+        }
+      }
+    }
+  }
 }

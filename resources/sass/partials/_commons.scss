@@ -8,4 +8,19 @@
 /* ________ REGOLE GENERALI ________ */
 body {
   font-family: 'Roboto', sans-serif;
+  color: $prymary_text_color;
+  background-color: $bg_main_color;
+}
+
+.container {
+  padding: 0 30px;
+}
+
+.flex {
+  display: flex;
+}
+
+img {
+  display: block;
+  width: 100%;
 }
