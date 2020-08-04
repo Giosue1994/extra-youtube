@@ -27,6 +27,15 @@ img {
   width: 100%;
 }
 
+ul {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+  color: #fff;
+}
+
 nav {
   position: fixed;
   top: 0;
@@ -66,7 +75,7 @@ nav .container .search-bar {
 nav .container .search-bar input {
   width: 100%;
   font-size: 18px;
-  padding: 5px 15px;
+  padding: 6px 15px;
   border: 1px solid #323232;
   box-shadow: none;
   background-color: #121212;
@@ -100,7 +109,7 @@ nav .container .options .list-options {
 
 nav .container .options .list-options li {
   font-size: 20px;
-  margin-left: 30px;
+  margin-left: 35px;
   position: relative;
   cursor: pointer;
 }
@@ -125,5 +134,89 @@ nav .container .options .list-options .profile {
 
 nav .container .options .list-options .profile:active {
   border: 1px solid #065fd4;
+}
+
+main #menu {
+  position: fixed;
+  margin-top: 62px;
+  padding-bottom: 62px;
+  background-color: #212121;
+  font-size: 17px;
+  width: 270px;
+  height: 100%;
+  overflow-y: hidden;
+}
+
+main #menu:hover {
+  overflow-y: auto;
+}
+
+main #menu:hover::-webkit-scrollbar {
+  width: 8px;
+}
+
+main #menu:hover::-webkit-scrollbar-thumb {
+  background: #555;
+}
+
+main #menu .section-menu {
+  border-bottom: 1px solid #383838;
+}
+
+main #menu .section-menu h4 {
+  padding: 0 30px;
+  padding-top: 27px;
+  color: #909090;
+}
+
+main #menu .section-menu ul {
+  padding: 10px 0;
+}
+
+main #menu .section-menu ul li {
+  padding: 12px 30px;
+}
+
+main #menu .section-menu ul li:hover {
+  background-color: #383838;
+}
+
+main #menu .section-menu ul li i {
+  padding-right: 25px;
+  font-size: 20px;
+  color: #909090;
+}
+
+main #menu .section-menu ul li.show-others {
+  cursor: pointer;
+}
+
+main #menu .section-menu ul li.active,
+main #menu .section-menu ul i.active {
+  background-color: #383838;
+  color: #fff;
+}
+
+main #menu .footer {
+  font-size: 15px;
+  color: #909090;
+}
+
+main #menu .footer ul {
+  display: flex;
+  padding-top: 15px;
+  flex-wrap: wrap;
+}
+
+main #menu .footer ul li {
+  margin-right: 10px;
+}
+
+main #menu .footer ul li a {
+  color: #909090;
+}
+
+main #menu .footer .copyright {
+  padding-top: 20px;
 }
 

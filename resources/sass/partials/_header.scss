@@ -39,15 +39,15 @@ nav {
       input {
         width: 100%;
         font-size: 18px;
-        padding: 5px 15px;
-        border: 1px solid #323232;
+        padding: 6px 15px;
+        border: 1px solid $search_btn_color;
         box-shadow: none;
-        background-color: #121212;
-        font-family: 'Roboto', sans-serif;
+        background-color: $bg_input_color;
+        font-family: $font_page;
         color: $prymary_text_color;
 
         &:focus {
-          outline: 1px solid #065fd4;
+          outline: 1px solid $outline_color;
         }
       }
 
@@ -55,7 +55,7 @@ nav {
         @include center_element;
         font-size: 15px;
         padding: 5px 30px;
-        background-color: #323232;
+        background-color: $search_btn_color;
         color: #6a6565;
         cursor: pointer;
 
@@ -73,7 +73,7 @@ nav {
 
         li {
           font-size: $icon_size;
-          margin-left: 30px;
+          margin-left: 35px;
           position: relative;
           cursor: pointer;
 
@@ -94,7 +94,7 @@ nav {
           border-radius: 50%;
 
           &:active {
-            border: 1px solid #065fd4;
+            border: 1px solid $outline_color;
           }
         }
       }

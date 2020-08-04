@@ -1,4 +1,85 @@
 // MAIN
 main {
+  #menu {
+    position: fixed;
+    margin-top: 62px;
+    padding-bottom: 62px;
+    background-color: $bg_menu_color;
+    font-size: $font_size_menu;
+    width: 270px;
+    height: 100%;
+    overflow-y: hidden;
 
+    &:hover {
+      overflow-y: auto;
+    }
+
+    &:hover::-webkit-scrollbar {
+      width: 8px;
+    }
+    &:hover::-webkit-scrollbar-thumb {
+      background: #555;
+    }
+
+    .section-menu {
+      border-bottom: 1px solid $hover_color_li;
+
+      h4 {
+        padding: 0 30px;
+        padding-top: 27px;
+        color: $secondary_text_color
+      }
+
+      ul {
+        padding: 10px 0;
+
+        li {
+          padding: 12px 30px;
+
+          &:hover {
+            background-color: $hover_color_li;
+          }
+
+          i {
+            padding-right: 25px;
+            font-size: $icon_size;
+            color: $icon_color;
+          }
+
+          &.show-others {
+            cursor: pointer;
+          }
+        }
+
+        li.active,
+        i.active {
+          background-color: $hover_color_li;
+          color: $prymary_text_color;
+        }
+      }
+    }
+
+    .footer {
+      font-size: 15px;
+      color: $secondary_text_color;
+
+      ul {
+        display: flex;
+        padding-top: 15px;
+        flex-wrap: wrap;
+
+        li {
+          margin-right: 10px;
+
+          a {
+            color: $secondary_text_color;
+          }
+        }
+      }
+
+      .copyright {
+        padding-top: 20px;
+      }
+    }
+  }
 }
