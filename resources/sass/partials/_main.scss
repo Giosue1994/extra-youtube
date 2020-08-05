@@ -1,12 +1,34 @@
 // MAIN
-main {
+#menu {
+  .large-menu {
+    width: 240px;
+  }
 
-  #menu {
+  .small-menu {
+    width: 70px;
+    .section-menu {
+      ul {
+        text-align: center;
+        li {
+          @include center_element;
+          font-size: 10px;
+
+          i {
+            padding-left: 20px;
+            padding-bottom: 10px;
+          }
+        }
+      }
+    }
+  }
+
+  .small-menu,
+  .large-menu {
     position: fixed;
     margin-top: 55px;
     padding-bottom: 75px;
-    background-color: $bg_menu_color;
     height: 100%;
+    background-color: $bg_menu_color;
     overflow-y: hidden;
 
     &:hover {
@@ -33,7 +55,7 @@ main {
         padding: 10px 0;
 
         li {
-          padding: 11px 25px;
+          padding: 11px 25px 11px;
           cursor: pointer;
 
           &:hover {
@@ -78,7 +100,7 @@ main {
         flex-wrap: wrap;
 
         li {
-          margin-right: 10px;
+          margin-right: 7px;
 
           a {
             color: #aaa;
@@ -91,45 +113,45 @@ main {
       }
     }
   }
+}
 
-  #list-video {
-    margin-top: 55px;
-    padding-top: 30px;
-    width: 100%;
+#list-video {
+  margin-top: 55px;
+  padding-top: 30px;
+  width: 100%;
 
-    .recommended {
-      border-bottom: 4px solid $hover_color_li;
-      justify-content: space-between;
-      flex-wrap: wrap;
+  .recommended {
+    border-bottom: 4px solid $hover_color_li;
+    justify-content: space-between;
+    flex-wrap: wrap;
 
-      .box-video {
-        background-color: blue;
+    .box-video {
+      background-color: blue;
+      padding: 20px 0;
+      margin-bottom: 20px;
+
+      .video-img {
+        background-color: red;
+        height: 150px;
         padding: 20px 0;
-        margin-bottom: 20px;
+      }
 
-        .video-img {
-          background-color: red;
-          height: 150px;
-          padding: 20px 0;
+      .video-description {
+        display: flex;
+
+        .profile-picture {
+          float: left;
+          height: 60px;
+          margin-right: 15px;
+          padding-top: 8px;
         }
 
-        .video-description {
-          display: flex;
-
-          .profile-picture {
-            float: left;
-            height: 60px;
-            margin-right: 15px;
-            padding-top: 8px;
+        .title {
+          h3 {
+            padding: 8px 0;
           }
-
-          .title {
-            h3 {
-              padding: 8px 0;
-            }
-            span {
-              display: block;
-            }
+          span {
+            display: block;
           }
         }
       }
@@ -139,11 +161,18 @@ main {
 
 ////////// MEDIA QUERY ////////////
 
-@media screen and (max-width: 492px) {
+@media screen and (max-width: 510px) {
   #list-video {
     .box-video {
       flex-basis: 100%;
     }
+  }
+
+  .add-padding-small {
+    padding-left: 70px;
+  }
+  .add-padding-large {
+    padding-left: 70px;
   }
 }
 
@@ -153,21 +182,28 @@ main {
       flex-basis: calc((100% / 2) - 15px);
     }
   }
-}
 
-@media screen and (max-width: 886px) {
-  #menu {
-    display: none;
+  .add-padding-small {
+    padding-left: 70px;
+  }
+  .add-padding-large {
+    padding-left: 70px;
   }
 }
 
 @media screen and (min-width: 887px) {
-  #list-video {
-    padding-left: 70px;
 
+  #list-video {
     .box-video {
       flex-basis: calc((100% / 3) - 15px);
     }
+  }
+
+  .add-padding-small {
+    padding-left: 70px;
+  }
+  .add-padding-large {
+    padding-left: 70px;
   }
 }
 
@@ -181,42 +217,23 @@ main {
 
 @media screen and (max-width: 1327px) {
   #menu {
-    width: 70px;
-
     .large-menu {
       display: none;
-    }
-
-    .small-menu {
-
-      .section-menu {
-        ul {
-          li {
-            text-align: center;
-            font-size: 10px;
-            padding: 18px 5px;
-
-            i {
-              padding-bottom: 10px;
-              padding-left: 20px;
-            }
-          }
-        }
-      }
     }
   }
 }
 
 @media screen and (min-width: 1328px) {
   #menu {
-    width: 240px;
-
-    .small-menu {
-      display: none;
+    .large-menu {
+      width: 240px;
     }
   }
 
-  #list-video {
+  .add-padding-large {
     padding-left: 240px;
+  }
+  .add-padding-small {
+    padding-left: 70px;
   }
 }

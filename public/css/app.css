@@ -55,6 +55,11 @@ a {
   }
 }
 
+header #menu {
+  position: absolute;
+  z-index: 45645;
+}
+
 nav {
   position: fixed;
   top: 0;
@@ -156,142 +161,193 @@ nav .container .options .list-options .profile:active {
   border: 1px solid #065fd4;
 }
 
-main #menu {
+#menu .large-menu {
+  width: 240px;
+}
+
+#menu .small-menu {
+  width: 70px;
+}
+
+#menu .small-menu .section-menu ul {
+  text-align: center;
+}
+
+#menu .small-menu .section-menu ul li {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 10px;
+}
+
+#menu .small-menu .section-menu ul li i {
+  padding-left: 20px;
+  padding-bottom: 10px;
+}
+
+#menu .small-menu,
+#menu .large-menu {
   position: fixed;
   margin-top: 55px;
   padding-bottom: 75px;
-  background-color: #212121;
   height: 100%;
+  background-color: #212121;
   overflow-y: hidden;
 }
 
-main #menu:hover {
+#menu .small-menu:hover,
+#menu .large-menu:hover {
   overflow-y: auto;
 }
 
-main #menu:hover::-webkit-scrollbar {
+#menu .small-menu:hover::-webkit-scrollbar,
+#menu .large-menu:hover::-webkit-scrollbar {
   width: 8px;
 }
 
-main #menu:hover::-webkit-scrollbar-thumb {
+#menu .small-menu:hover::-webkit-scrollbar-thumb,
+#menu .large-menu:hover::-webkit-scrollbar-thumb {
   background: #555;
 }
 
-main #menu .section-menu {
+#menu .small-menu .section-menu,
+#menu .large-menu .section-menu {
   border-bottom: 1px solid #383838;
 }
 
-main #menu .section-menu h4 {
+#menu .small-menu .section-menu h4,
+#menu .large-menu .section-menu h4 {
   padding: 0 30px;
   padding-top: 27px;
   color: #909090;
 }
 
-main #menu .section-menu ul {
+#menu .small-menu .section-menu ul,
+#menu .large-menu .section-menu ul {
   padding: 10px 0;
 }
 
-main #menu .section-menu ul li {
-  padding: 11px 25px;
+#menu .small-menu .section-menu ul li,
+#menu .large-menu .section-menu ul li {
+  padding: 11px 25px 11px;
   cursor: pointer;
 }
 
-main #menu .section-menu ul li:hover {
+#menu .small-menu .section-menu ul li:hover,
+#menu .large-menu .section-menu ul li:hover {
   background-color: #383838;
 }
 
-main #menu .section-menu ul li i {
+#menu .small-menu .section-menu ul li i,
+#menu .large-menu .section-menu ul li i {
   padding-right: 25px;
   font-size: 17px;
   color: #909090;
 }
 
-main #menu .section-menu ul li.show-others {
+#menu .small-menu .section-menu ul li.show-others,
+#menu .large-menu .section-menu ul li.show-others {
   cursor: pointer;
 }
 
-main #menu .section-menu ul li.active {
+#menu .small-menu .section-menu ul li.active,
+#menu .large-menu .section-menu ul li.active {
   background-color: #383838;
   color: #fff;
 }
 
-main #menu .section-menu ul li.active a i {
+#menu .small-menu .section-menu ul li.active a i,
+#menu .large-menu .section-menu ul li.active a i {
   color: #fff;
 }
 
-main #menu .section-menu ul li.active:hover {
+#menu .small-menu .section-menu ul li.active:hover,
+#menu .large-menu .section-menu ul li.active:hover {
   background-color: #4d4d4d;
 }
 
-main #menu .footer {
+#menu .small-menu .footer,
+#menu .large-menu .footer {
   font-size: 13px;
   color: #909090;
 }
 
-main #menu .footer ul {
+#menu .small-menu .footer ul,
+#menu .large-menu .footer ul {
   display: flex;
   padding-top: 15px;
   flex-wrap: wrap;
 }
 
-main #menu .footer ul li {
-  margin-right: 10px;
+#menu .small-menu .footer ul li,
+#menu .large-menu .footer ul li {
+  margin-right: 7px;
 }
 
-main #menu .footer ul li a {
+#menu .small-menu .footer ul li a,
+#menu .large-menu .footer ul li a {
   color: #aaa;
 }
 
-main #menu .footer .copyright {
+#menu .small-menu .footer .copyright,
+#menu .large-menu .footer .copyright {
   padding-top: 20px;
 }
 
-main #list-video {
+#list-video {
   margin-top: 55px;
   padding-top: 30px;
   width: 100%;
 }
 
-main #list-video .recommended {
+#list-video .recommended {
   border-bottom: 4px solid #383838;
   justify-content: space-between;
   flex-wrap: wrap;
 }
 
-main #list-video .recommended .box-video {
+#list-video .recommended .box-video {
   background-color: blue;
   padding: 20px 0;
   margin-bottom: 20px;
 }
 
-main #list-video .recommended .box-video .video-img {
+#list-video .recommended .box-video .video-img {
   background-color: red;
   height: 150px;
   padding: 20px 0;
 }
 
-main #list-video .recommended .box-video .video-description {
+#list-video .recommended .box-video .video-description {
   display: flex;
 }
 
-main #list-video .recommended .box-video .video-description .profile-picture {
+#list-video .recommended .box-video .video-description .profile-picture {
   float: left;
   height: 60px;
   margin-right: 15px;
   padding-top: 8px;
 }
 
-main #list-video .recommended .box-video .video-description .title h3 {
+#list-video .recommended .box-video .video-description .title h3 {
   padding: 8px 0;
 }
 
-main #list-video .recommended .box-video .video-description .title span {
+#list-video .recommended .box-video .video-description .title span {
   display: block;
 }
 
-@media screen and (max-width: 492px) {
+@media screen and (max-width: 510px) {
   #list-video .box-video {
     flex-basis: 100%;
+  }
+
+  .add-padding-small {
+    padding-left: 70px;
+  }
+
+  .add-padding-large {
+    padding-left: 70px;
   }
 }
 
@@ -299,21 +355,27 @@ main #list-video .recommended .box-video .video-description .title span {
   #list-video .box-video {
     flex-basis: calc((100% / 2) - 15px);
   }
-}
 
-@media screen and (max-width: 886px) {
-  #menu {
-    display: none;
+  .add-padding-small {
+    padding-left: 70px;
+  }
+
+  .add-padding-large {
+    padding-left: 70px;
   }
 }
 
 @media screen and (min-width: 887px) {
-  #list-video {
+  #list-video .box-video {
+    flex-basis: calc((100% / 3) - 15px);
+  }
+
+  .add-padding-small {
     padding-left: 70px;
   }
 
-  #list-video .box-video {
-    flex-basis: calc((100% / 3) - 15px);
+  .add-padding-large {
+    padding-left: 70px;
   }
 }
 
@@ -324,37 +386,22 @@ main #list-video .recommended .box-video .video-description .title span {
 }
 
 @media screen and (max-width: 1327px) {
-  #menu {
-    width: 70px;
-  }
-
   #menu .large-menu {
     display: none;
-  }
-
-  #menu .small-menu .section-menu ul li {
-    text-align: center;
-    font-size: 10px;
-    padding: 18px 5px;
-  }
-
-  #menu .small-menu .section-menu ul li i {
-    padding-bottom: 10px;
-    padding-left: 20px;
   }
 }
 
 @media screen and (min-width: 1328px) {
-  #menu {
+  #menu .large-menu {
     width: 240px;
   }
 
-  #menu .small-menu {
-    display: none;
+  .add-padding-large {
+    padding-left: 240px;
   }
 
-  #list-video {
-    padding-left: 240px;
+  .add-padding-small {
+    padding-left: 70px;
   }
 }
 

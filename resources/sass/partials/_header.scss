@@ -11,6 +11,13 @@
   }
 }
 
+header {
+  #menu {
+    position: absolute;
+    z-index: 45645;
+  }
+}
+
 nav {
   position: fixed;
   top: 0;

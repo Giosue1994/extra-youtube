@@ -12,17 +12,17 @@
     <!-- HEADER -->
     <header>
       @include('partials.header')
+      @include('partials.large_menu')
     </header>
 
     <!-- MAIN -->
     <main class="flex">
-      @yield('main-content')
-    </main>
+      @include('partials.small_menu')
+      @include('partials.large_menu')
 
-    <!-- FOOTER -->
-    <footer>
-      @include('partials.footer')
-    </footer>
+      @yield('main-content')
+
+    </main>
 
     <script src="{{ asset('/js/app.js') }}"></script>
 
