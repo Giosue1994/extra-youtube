@@ -24,6 +24,7 @@
     <!-- OPTIONS -->
     <div class="options">
       <ul class="list-options flex">
+        <li class="btn-search hidden"><i class="fas fa-search"></i></li>
         <li><i class="fas fa-video"></i><i class="fas fa-plus"></i></li>
         <li><i class="fas fa-th"></i></li>
         <li><i class="fas fa-bell"></i></li>

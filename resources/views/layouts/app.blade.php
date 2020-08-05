@@ -15,7 +15,7 @@
     </header>
 
     <!-- MAIN -->
-    <main>
+    <main class="flex">
       @yield('main-content')
     </main>
 

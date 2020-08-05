@@ -1,4 +1,16 @@
 // HEADER
+@media screen and (max-width: 656px) {
+  .search-bar {
+    display: none;
+  }
+
+  .options {
+    .btn-search {
+      display: block;
+    }
+  }
+}
+
 nav {
   position: fixed;
   top: 0;
@@ -6,7 +18,7 @@ nav {
   width: 100%;
 
   .container {
-    height: 62px;
+    height: 55px;
     background-color: rgba(33, 33, 33, 0.9);
     align-items: center;
     justify-content: space-between;
@@ -20,7 +32,7 @@ nav {
       }
 
       img {
-        width: 88px;
+        width: 80px;
         margin-left: 30px;
       }
 
@@ -34,12 +46,13 @@ nav {
     }
 
     .search-bar {
-      width: 40%;
+      width: 50%;
 
       input {
         width: 100%;
-        font-size: 18px;
-        padding: 6px 15px;
+        font-size: 16px;
+        padding: 5.5px 14px;
+        margin-left: 30px;
         border: 1px solid $search_btn_color;
         box-shadow: none;
         background-color: $bg_input_color;
@@ -54,7 +67,7 @@ nav {
       .lens {
         @include center_element;
         font-size: 15px;
-        padding: 5px 30px;
+        padding: 5px 25px;
         background-color: $search_btn_color;
         color: #6a6565;
         cursor: pointer;
@@ -73,23 +86,23 @@ nav {
 
         li {
           font-size: $icon_size;
-          margin-left: 35px;
+          margin-left: 30px;
           position: relative;
           cursor: pointer;
 
           .fa-plus {
             position: absolute;
-            top: 5px;
-            left: 2.5px;
+            top: 4px;
+            left: 2px;
             color: $bg_main_color;
-            font-size: 12px;
+            font-size: 10px;
           }
 
         }
         .profile {
           @include center_element;
-          width: 35px;
-          height: 35px;
+          width: 32px;
+          height: 32px;
           background-color: #ff6600;
           border-radius: 50%;
 

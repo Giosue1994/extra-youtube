@@ -8,16 +8,25 @@
 /* ________ REGOLE GENERALI ________ */
 body {
   font-family: $font_page;
+  font-size: $font_size_body;
   color: $prymary_text_color;
   background-color: $bg_main_color;
 }
 
 .container {
-  padding: 0 30px;
+  padding: 0 25px;
 }
 
 .flex {
   display: flex;
+}
+
+.hidden {
+  display: none;
+}
+
+.visible {
+  display: block;
 }
 
 img {
