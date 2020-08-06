@@ -2,6 +2,16 @@
 @media screen and (max-width: 656px) {
   .search-bar {
     display: none;
+
+    .back {
+      display: block;
+      @include center_element;
+
+      i {
+        cursor: pointer;
+        font-size: $icon_size;
+      }
+    }
   }
 
   .options {

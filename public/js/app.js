@@ -30219,6 +30219,8 @@ __webpack_require__(/*! ./bootstrap */ "./resources/js/bootstrap.js");
 var $ = __webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jquery.js");
 
 $(document).ready(function () {
+  ///// MENU //////
+  // al click del burger compare la finestra del menu
   $('.stretched-menu i').click(function () {
     $('header .large-menu').toggle();
     $('main .small-menu').toggleClass('visible');
@@ -30241,7 +30243,34 @@ $(document).ready(function () {
       $('#list-video').addClass('add-padding-small');
       $('#list-video').removeClass('add-padding-large');
     }
+  }); /////// SEARCH BAR ///////
+  // al click della lente compare la barra di ricerca
+
+  $('.btn-search i').click(function () {
+    $('.logo').hide();
+    $('.options').hide();
+    $('.search-bar').show();
+    $('.search-bar').css('width', '100%');
+  }); // al click della freccia torno indietro
+
+  $('.back i').click(function () {
+    $('.logo').show();
+    $('.options').show();
+    $('.search-bar').hide();
   });
+  $(window).resize(function () {
+    if ($(window).width() >= 657) {
+      $('.search-bar').show();
+      $('.search-bar').css('width', '50%');
+    } else if ($(window).width() < 657) {
+      $('.logo').show();
+      $('.options').show();
+      $('.search-bar').hide();
+    }
+  }); ////////// VIDEO BUTTON /////////
+  // al passaggio del mouse sul quadratino mostro un messaggio
+
+  $('.square').mouseenter(function () {});
 });
 
 /***/ }),

@@ -14,6 +14,9 @@
     <!-- SEARCH BAR -->
     <div class="search-bar">
       <form class="input-search flex" action="" method="get">
+        <div class="back hidden">
+          <i class="fas fa-arrow-left"></i>
+        </div>
         <input type="text" placeholder="Cerca">
         <div class="lens" title="Cerca">
           <i class="fas fa-search"></i>
