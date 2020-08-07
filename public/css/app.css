@@ -15,6 +15,15 @@ body {
   font-size: 14px;
   color: #fff;
   background-color: #181818;
+  overflow: auto;
+}
+
+body::-webkit-scrollbar {
+  width: 8px;
+}
+
+body::-webkit-scrollbar-thumb {
+  background: #555;
 }
 
 .container {
@@ -70,11 +79,11 @@ a {
 }
 
 header #menu {
-  position: absolute;
-  z-index: 45645;
+  position: fixed;
 }
 
 nav {
+  z-index: 45645;
   position: fixed;
   top: 0;
   left: 0;
@@ -84,6 +93,7 @@ nav {
 nav .container {
   height: 55px;
   background-color: rgba(33, 33, 33, 0.9);
+  display: flex;
   align-items: center;
   justify-content: space-between;
 }
@@ -143,6 +153,7 @@ nav .container .search-bar .lens:hover {
 
 nav .container .options .list-options {
   list-style-type: none;
+  display: flex;
   align-items: center;
 }
 
@@ -175,30 +186,6 @@ nav .container .options .list-options .profile:active {
   border: 1px solid #065fd4;
 }
 
-#menu .large-menu {
-  width: 240px;
-}
-
-#menu .small-menu {
-  width: 70px;
-}
-
-#menu .small-menu .section-menu ul {
-  text-align: center;
-}
-
-#menu .small-menu .section-menu ul li {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 10px;
-}
-
-#menu .small-menu .section-menu ul li i {
-  padding-left: 20px;
-  padding-bottom: 10px;
-}
-
 #menu .small-menu,
 #menu .large-menu {
   position: fixed;
@@ -206,7 +193,7 @@ nav .container .options .list-options .profile:active {
   padding-bottom: 75px;
   height: 100%;
   background-color: #212121;
-  overflow-y: hidden;
+  overflow: hidden;
 }
 
 #menu .small-menu:hover,
@@ -243,7 +230,13 @@ nav .container .options .list-options .profile:active {
 
 #menu .small-menu .section-menu ul li,
 #menu .large-menu .section-menu ul li {
-  padding: 11px 25px 11px;
+  padding: 0 25px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
   cursor: pointer;
 }
 
@@ -263,6 +256,8 @@ nav .container .options .list-options .profile:active {
 #menu .large-menu .section-menu ul li .sub {
   display: flex;
   align-items: center;
+  position: relative;
+  width: 177px;
 }
 
 #menu .small-menu .section-menu ul li .sub img,
@@ -272,6 +267,24 @@ nav .container .options .list-options .profile:active {
   width: 25px;
   height: 25px;
   margin-right: 20px;
+}
+
+#menu .small-menu .section-menu ul li .sub span,
+#menu .large-menu .section-menu ul li .sub span {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+#menu .small-menu .section-menu ul li .sub .online,
+#menu .large-menu .section-menu ul li .sub .online {
+  position: absolute;
+  right: -10px;
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background-color: #3ea6ff;
+  margin: 0 6px;
 }
 
 #menu .small-menu .section-menu ul li.show-others,
@@ -304,7 +317,7 @@ nav .container .options .list-options .profile:active {
 #menu .small-menu .footer ul,
 #menu .large-menu .footer ul {
   display: flex;
-  padding-top: 15px;
+  padding: 15px 25px 0;
   flex-wrap: wrap;
 }
 
@@ -321,6 +334,31 @@ nav .container .options .list-options .profile:active {
 #menu .small-menu .footer .copyright,
 #menu .large-menu .footer .copyright {
   padding-top: 20px;
+}
+
+#menu .large-menu {
+  width: 240px;
+}
+
+#menu .small-menu {
+  width: 70px;
+}
+
+#menu .small-menu .section-menu ul {
+  text-align: center;
+}
+
+#menu .small-menu .section-menu ul li {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 10px;
+  white-space: normal;
+}
+
+#menu .small-menu .section-menu ul li i {
+  padding-left: 20px;
+  padding-bottom: 10px;
 }
 
 #list-video {
@@ -455,6 +493,17 @@ nav .container .options .list-options .profile:active {
 #list-video .recommended .box-video .video-description .title h3 {
   padding: 15px 0 5px;
   width: 80%;
+  line-height: 25px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+#list-video .recommended .box-video .video-description .title h3 {
+  white-space: normal;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
 }
 
 #list-video .recommended .box-video .video-description .title span,

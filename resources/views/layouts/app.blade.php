@@ -12,7 +12,6 @@
     <!-- HEADER -->
     <header>
       @include('partials.header')
-      @include('partials.large_menu')
     </header>
 
     <!-- MAIN -->

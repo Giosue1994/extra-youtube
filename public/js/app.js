@@ -30238,8 +30238,8 @@ $(document).ready(function () {
 
     if ($('main .small-menu').hasClass('visible')) {
       $('main .large-menu').removeClass('visible');
-      $('header .large-menu').addClass('hidden');
       $('main .large-menu').addClass('hidden');
+      $('header .large-menu').addClass('hidden');
       $('#list-video').addClass('add-padding-small');
       $('#list-video').removeClass('add-padding-large');
     }
@@ -30267,10 +30267,7 @@ $(document).ready(function () {
       $('.options').show();
       $('.search-bar').hide();
     }
-  }); ////////// VIDEO BUTTON /////////
-  // al passaggio del mouse sul quadratino mostro un messaggio
-
-  $('.square').mouseenter(function () {});
+  });
 });
 
 /***/ }),

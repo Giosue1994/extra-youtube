@@ -1,27 +1,5 @@
 // MAIN
 #menu {
-  .large-menu {
-    width: 240px;
-  }
-
-  .small-menu {
-    width: 70px;
-    .section-menu {
-      ul {
-        text-align: center;
-        li {
-          @include center_element;
-          font-size: 10px;
-
-          i {
-            padding-left: 20px;
-            padding-bottom: 10px;
-          }
-        }
-      }
-    }
-  }
-
   .small-menu,
   .large-menu {
     position: fixed;
@@ -29,7 +7,7 @@
     padding-bottom: 75px;
     height: 100%;
     background-color: $bg_menu_color;
-    overflow-y: hidden;
+    overflow: hidden;
 
     &:hover {
       overflow-y: auto;
@@ -55,7 +33,10 @@
         padding: 10px 0;
 
         li {
-          padding: 11px 25px 11px;
+          padding: 0 25px;
+          height: 48px;
+          @include vertical_center;
+          @include hidden_text;
           cursor: pointer;
 
           &:hover {
@@ -69,8 +50,9 @@
           }
 
           .sub {
-            display: flex;
-            align-items: center;
+            @include vertical_center;
+            position: relative;
+            width: 177px;
 
             img {
               display: inline-block;
@@ -78,6 +60,20 @@
               width: 25px;
               height: 25px;
               margin-right: 20px;
+            }
+
+            span {
+              @include hidden_text;
+            }
+
+            .online {
+              position: absolute;
+              right: -10px;
+              width: 4px;
+              height: 4px;
+              border-radius: 50%;
+              background-color: #3ea6ff;
+              margin: 0 6px;
             }
           }
 
@@ -110,7 +106,7 @@
 
       ul {
         display: flex;
-        padding-top: 15px;
+        padding: 15px 25px 0;
         flex-wrap: wrap;
 
         li {
@@ -124,6 +120,30 @@
 
       .copyright {
         padding-top: 20px;
+      }
+    }
+  }
+
+  .large-menu {
+    width: 240px;
+
+  }
+
+  .small-menu {
+    width: 70px;
+    .section-menu {
+      ul {
+        text-align: center;
+        li {
+          @include center_element;
+          font-size: 10px;
+          white-space: normal;
+
+          i {
+            padding-left: 20px;
+            padding-bottom: 10px;
+          }
+        }
       }
     }
   }
@@ -252,7 +272,19 @@
           h3 {
             padding: 15px 0 5px;
             width: 80%;
+            line-height: 25px;
+            overflow: hidden;
+            white-space:nowrap;
+            text-overflow: ellipsis;
           }
+
+          h3 {
+            white-space: normal;
+           display: -webkit-box;
+           -webkit-line-clamp: 2;
+           -webkit-box-orient: vertical;
+          }
+
           span,
           span a {
             color: $secondary_text_color;
@@ -291,6 +323,7 @@
 }
 
 @media screen and (min-width: 511px) {
+
   #list-video {
     .box-video {
       flex-basis: calc((100% / 2) - 15px);

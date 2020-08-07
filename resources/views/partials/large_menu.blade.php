@@ -21,12 +21,16 @@
 
   <div class="section-menu subscribe">
     <h4>ISCRIZIONI</h4>
-    @foreach ($subscribe_list as $subscribe)
-      <ul>
-        <li><a class="sub" href="#"><img src="{{ $subscribe['profile-picture'] }}" alt="{{ $subscribe['name'] }}"><span>{{ $subscribe['name'] }}</span></a></li>
-      </ul>
-    @endforeach
     <ul>
+      @foreach ($subscribe_list as $subscribe)
+        <li>
+          <a class="sub" href="#">
+            <img src="{{ $subscribe['profile-picture'] }}" alt="{{ $subscribe['name'] }}">
+            <span>{{ $subscribe['name'] }}</span>
+            <span class="online"></span>
+          </a>
+        </li>
+      @endforeach
       <li class="show-others"><i class="fas fa-angle-down"></i>Mostra altri 90</li>
     </ul>
   </div>
@@ -46,31 +50,29 @@
   <div class="section-menu settings">
     <ul>
       <li><a href="#"><i class="fas fa-cog"></i>Impostazioni</a></li>
-      <li><a href="#"><i class="fas fa-flag"></i>Cronologia segnal...</a></li>
+      <li><a href="#"><i class="fas fa-flag"></i>Cronologia segnalazioni</a></li>
       <li><a href="#"><i class="fas fa-question-circle"></i>Guida</a></li>
       <li><a href="#"><i class="fas fa-comment-alt"></i>Invia feedback</a></li>
     </ul>
   </div>
 
   <div class="footer">
-    <div class="container">
-      <ul>
-        <li><a href="#">Informazioni</a></li>
-        <li><a href="#">Stampa</a></li>
-        <li><a href="#">Copyright</a></li>
-        <li><a href="#">Contattaci</a></li>
-        <li><a href="#">Creator</a></li>
-        <li><a href="#">Pubblicità</a></li>
-        <li><a href="#">Sviluppatori</a></li>
-      </ul>
-      <ul>
-        <li><a href="#">Termini</a></li>
-        <li><a href="#">Privacy</a></li>
-        <li><a href="#">Nome e sicurezza</a></li>
-        <li><a href="#">Prova le nuove funzioni</a></li>
-        <li class="copyright">© 2020 Google LLC</li>
-      </ul>
-    </div>
+    <ul>
+      <li><a href="#">Informazioni</a></li>
+      <li><a href="#">Stampa</a></li>
+      <li><a href="#">Copyright</a></li>
+      <li><a href="#">Contattaci</a></li>
+      <li><a href="#">Creator</a></li>
+      <li><a href="#">Pubblicità</a></li>
+      <li><a href="#">Sviluppatori</a></li>
+    </ul>
+    <ul>
+      <li><a href="#">Termini</a></li>
+      <li><a href="#">Privacy</a></li>
+      <li><a href="#">Nome e sicurezza</a></li>
+      <li><a href="#">Prova le nuove funzioni</a></li>
+      <li class="copyright">© 2020 Google LLC</li>
+    </ul>
   </div>
 </div>
 </section>

@@ -1,5 +1,6 @@
 <nav>
-  <div class="container flex">
+  @include('partials.large_menu')
+  <div class="container">
     <!-- LOGO -->
     <div class="logo flex">
       <!-- Stretched menu -->
@@ -26,7 +27,7 @@
 
     <!-- OPTIONS -->
     <div class="options">
-      <ul class="list-options flex">
+      <ul class="list-options">
         <li class="btn-search hidden"><i class="fas fa-search"></i></li>
         <li><i class="fas fa-video"></i><i class="fas fa-plus"></i></li>
         <li><i class="fas fa-th"></i></li>
