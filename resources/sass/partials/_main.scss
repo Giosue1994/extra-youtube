@@ -68,6 +68,20 @@
             color: $icon_color;
           }
 
+          .sub {
+            display: flex;
+            align-items: center;
+
+            img {
+              display: inline-block;
+              border-radius: 50%;
+              width: 25px;
+              height: 25px;
+              margin-right: 20px;
+            }
+          }
+
+
           &.show-others {
             cursor: pointer;
           }
@@ -189,8 +203,7 @@
       }
 
       .video-img {
-        background-color: red;
-        height: 170px;
+        background-color: $bg_menu_color;
         position: relative;
 
         .duration {
@@ -222,19 +235,37 @@
         }
 
         .profile-picture {
-          float: left;
-          height: 60px;
+          margin-top: 10px;
           margin-right: 15px;
-          padding-top: 15px;
+          @include center_element;
+          width: 36px;
+          height: 36px;
+
+          img {
+            border-radius: 50%;
+            width: 36px;
+            height: 36px;
+          }
         }
 
         .title {
           h3 {
             padding: 15px 0 5px;
+            width: 80%;
           }
           span,
           span a {
             color: $secondary_text_color;
+            .name {
+              &:hover {
+                color: white;
+              }
+            }
+          }
+
+
+          .visual::after {
+            content: ' • ';
           }
         }
       }

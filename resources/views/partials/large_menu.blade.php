@@ -21,14 +21,12 @@
 
   <div class="section-menu subscribe">
     <h4>ISCRIZIONI</h4>
+    @foreach ($subscribe_list as $subscribe)
+      <ul>
+        <li><a class="sub" href="#"><img src="{{ $subscribe['profile-picture'] }}" alt="{{ $subscribe['name'] }}"><span>{{ $subscribe['name'] }}</span></a></li>
+      </ul>
+    @endforeach
     <ul>
-      <li><a href="#">Personaggio</a></li>
-      <li><a href="#">Personaggio</a></li>
-      <li><a href="#">Personaggio</a></li>
-      <li><a href="#">Personaggio</a></li>
-      <li><a href="#">Personaggio</a></li>
-      <li><a href="#">Personaggio</a></li>
-      <li><a href="#">Personaggio</a></li>
       <li class="show-others"><i class="fas fa-angle-down"></i>Mostra altri 90</li>
     </ul>
   </div>

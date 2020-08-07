@@ -14,5 +14,16 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('youtube');
+
+    $video_list = config('video.video');
+    $subscribe_list = config('subscribes.subscribe');
+
+    return view('youtube',
+      [
+        'video_list' => $video_list
+      ],
+      [
+        'subscribe_list' => $subscribe_list
+      ]
+    );
 })->name('youtube');
