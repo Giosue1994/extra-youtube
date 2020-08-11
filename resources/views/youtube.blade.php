@@ -24,6 +24,18 @@
               <div class="video-description">
                 <div class="details">
                   <i class="fas fa-ellipsis-v"></i>
+                  <div class="dropdown hidden">
+                    <ul class="list-menu">
+                      <li><a href="#"><i class="fas fa-stream"></i>Aggiungi alla coda</a></li>
+                      <li><a href="#"><i class="fas fa-clock"></i>Salva in guarda più tardi</a></li>
+                      <li><a href="#"><i class="fas fa-archive"></i>Salva in una playlist</a></li>
+                    </ul>
+                    <ul class="list-menu">
+                      <li><a href="#"><i class="fas fa-ban"></i>Non mi interessa</a></li>
+                      <li><a href="#"><i class="fas fa-times-circle"></i>Non consigliare il canale</a></li>
+                      <li><a href="#"><i class="fas fa-flag"></i>Segnala</a></li>
+                    </ul>
+                  </div>
                 </div>
                 <!-- Profile picture -->
                 <div class="profile-picture">
@@ -33,9 +45,11 @@
                 <!-- Title -->
                 <div class="title">
                   <h3><a href="#">{{ $video['title'] }}</a></h3>
-                  <span><a class="name" href="#">{{ $video['name'] }}</a></span><br>
-                  <span class="visual">{{ $video['visual'] }} visualizzazioni</span>
-                  <span>{{ $video['time'] }}</span>
+                  <div class="video-details">
+                    <span><a class="name" href="#">{{ $video['name'] }}</a></span><br>
+                    <span class="visual">{{ $video['visual'] }} visualizzazioni</span>
+                    <span>{{ $video['time'] }}</span>
+                  </div>
                 </div>
               </div>
 

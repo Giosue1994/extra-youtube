@@ -29,24 +29,22 @@
         color: $secondary_text_color
       }
 
-      ul {
-        padding: 10px 0;
+      .list-menu {
+        &.hide-list {
+          padding: 0 0 10px;
+          display: none;
+        }
 
         li {
-          padding: 0 25px;
-          height: 48px;
-          @include vertical_center;
-          @include hidden_text;
-          cursor: pointer;
+          &.show-others,
+          &.hide-others {
+            cursor: pointer;
 
-          &:hover {
-            background-color: $hover_color_li;
-          }
-
-          i {
-            padding-right: 25px;
-            font-size: $icon_size;
-            color: $icon_color;
+            i {
+              padding-right: 25px;
+              font-size: $icon_size;
+              color: $icon_color;
+            }
           }
 
           .sub {
@@ -76,25 +74,13 @@
               margin: 0 6px;
             }
           }
-
-
-          &.show-others {
-            cursor: pointer;
-          }
         }
+      }
 
-        li.active {
-          a {
-            i {
-              color: $prymary_text_color;
-            }
-          }
-
-          background-color: $hover_color_li;
-          color: $prymary_text_color;
-
-          &:hover {
-            background-color: #4d4d4d;
+      &.subscribe {
+        .list-menu {
+          &:first-of-type {
+            padding-bottom: 0;
           }
         }
       }
@@ -132,16 +118,21 @@
   .small-menu {
     width: 70px;
     .section-menu {
-      ul {
+      border-bottom: none;
+      .list-menu {
         text-align: center;
         li {
           @include center_element;
           font-size: 10px;
           white-space: normal;
+          height: 75px;
 
-          i {
-            padding-left: 20px;
-            padding-bottom: 10px;
+          a {
+            width: unset;
+            i {
+              padding-left: 20px;
+              padding-bottom: 10px;
+            }
           }
         }
       }
@@ -252,6 +243,22 @@
           color: $secondary_text_color;
           font-size: $icon_size;
           display: none;
+
+          & > i:hover {
+            color: white;
+          }
+
+          .dropdown {
+            top: 40px;
+            right: 0;
+            z-index: 3456;
+            li {
+              i {
+                color: $secondary_text_color;
+                font-size: $font_size_body;
+              }
+            }
+          }
         }
 
         .profile-picture {
@@ -270,35 +277,34 @@
 
         .title {
           h3 {
-            padding: 15px 0 5px;
+            padding-top: 15px;
             width: 80%;
-            line-height: 25px;
             overflow: hidden;
-            white-space:nowrap;
             text-overflow: ellipsis;
-          }
-
-          h3 {
             white-space: normal;
-           display: -webkit-box;
-           -webkit-line-clamp: 2;
-           -webkit-box-orient: vertical;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
           }
 
-          span,
-          span a {
-            color: $secondary_text_color;
-            .name {
-              &:hover {
-                color: white;
+          .video-details {
+            padding-top: 5px;
+            span,
+            a {
+              color: $secondary_text_color;
+              .name {
+                &:hover {
+                  color: white;
+                }
               }
+            }
+
+
+            .visual::after {
+              content: ' • ';
             }
           }
 
-
-          .visual::after {
-            content: ' • ';
-          }
         }
       }
     }

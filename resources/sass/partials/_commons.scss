@@ -44,9 +44,168 @@ img {
 
 ul {
   list-style-type: none;
+
+  &.list-menu {
+    padding: 10px 0;
+
+    li {
+      padding: 0 25px;
+      height: 45px;
+      @include vertical_center;
+      @include hidden_text;
+      cursor: pointer;
+
+      &:hover {
+        background-color: $hover_color_li;
+      }
+
+      &:active {
+        background-color: #4d4d4d;
+      }
+
+      &.active {
+        background-color: $hover_color_li;
+        color: $prymary_text_color;
+
+        a {
+          i {
+            color: $prymary_text_color;
+          }
+        }
+
+        &:hover {
+          background-color: #4d4d4d;
+
+          &:active {
+            background-color: #696565;
+          }
+        }
+      }
+
+      a {
+        width: 100%;
+
+        i {
+          padding-right: 25px;
+          font-size: $icon_size;
+          color: $icon_color;
+        }
+      }
+
+    }
+  }
 }
 
 a {
   text-decoration: none;
   color: $prymary_text_color;
+}
+
+.dropdown {
+  position: absolute;
+  top: 30px;
+  right: -10px;
+  white-space: nowrap;
+  background-color: rgba(#212121, 0.95);
+  border: 1px solid $hover_color_li;
+  border-top: none;
+  font-size: $font_size_body;
+
+  .list-menu {
+    li {
+      a {
+        position: relative;
+        @include vertical_center;
+      }
+    }
+  }
+
+  &:nth-child(2) {
+    ul {
+      padding: 5px 0;
+      border-bottom: 1px solid $hover_color_li;
+    }
+
+    i {
+      color: red;
+    }
+  }
+
+  &.drop-notif {
+    width: 480px;
+
+    i {
+      color: $secondary_text_color;
+    }
+
+    .notifications-settings {
+      justify-content: space-between;
+      padding: 15px 20px;
+      border-bottom: 1px solid $hover_color_li;
+
+      i {
+        font-size: $icon_size;
+      }
+    }
+
+    .notifications-box {
+      @include center_element;
+      flex-direction: column;
+      padding: 10px 80px;
+      text-align: center;
+      white-space: normal;
+      height: 600px;
+      color: $secondary_text_color;
+
+      i {
+        font-size: 100px;
+        padding-bottom: 40px;
+      }
+
+      h4 {
+        padding-bottom: 10px;
+      }
+    }
+  }
+
+  &.drop-prof {
+    top: 40px;
+
+    i {
+      position: relative;
+      color: $secondary_text_color;
+      font-size: 20px;
+    }
+
+    .account {
+      padding: 15px 20px;
+      border-bottom: 1px solid $hover_color_li;
+      .profile-picture {
+        margin-right: 15px;
+        @include center_element;
+        width: 36px;
+        height: 36px;
+
+        img {
+          border-radius: 50%;
+          width: 36px;
+          height: 36px;
+        }
+      }
+
+      .name-account {
+        flex-direction: column;
+
+        span,
+        a {
+          font-size: $font_size_body;
+        }
+
+        a {
+          padding-top: 10px;
+          color: $outline_color;
+        }
+      }
+    }
+  }
 }

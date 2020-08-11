@@ -30243,6 +30243,15 @@ $(document).ready(function () {
       $('#list-video').addClass('add-padding-small');
       $('#list-video').removeClass('add-padding-large');
     }
+  }); // al chlick di show-other mostro la lista di iscritti
+
+  $('.show-others').click(function () {
+    $('.show-others').hide();
+    $('.hide-list').show();
+  });
+  $('.hide-others').click(function () {
+    $('.show-others').show();
+    $('.hide-list').hide();
   }); /////// SEARCH BAR ///////
   // al click della lente compare la barra di ricerca
 
@@ -30267,6 +30276,25 @@ $(document).ready(function () {
       $('.options').show();
       $('.search-bar').hide();
     }
+  }); ////////// DROPDOWN ////////////
+  //l click del tasto compare la dropdown
+
+  $('.list-options li').click(function () {
+    if (!$(this).children('.dropdown').hasClass('visible')) {
+      $('.dropdown').removeClass('visible');
+    }
+
+    $(this).children('.dropdown').toggleClass('visible');
+  });
+  $('.details').click(function () {
+    if (!$(this).children('.dropdown').hasClass('visible')) {
+      $('.dropdown').removeClass('visible');
+    }
+
+    $(this).children('.dropdown').toggleClass('visible');
+  });
+  $('.box-video').mouseleave(function () {
+    $('.details .dropdown').removeClass('visible');
   });
 });
 

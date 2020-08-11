@@ -17,13 +17,15 @@ Route::get('/', function () {
 
     $video_list = config('video.video');
     $subscribe_list = config('subscribes.subscribe');
+    $subscribe_hide_list = config('subscribes.subscribe-hide');
 
     return view('youtube',
       [
         'video_list' => $video_list
       ],
       [
-        'subscribe_list' => $subscribe_list
+        'subscribe_list' => $subscribe_list,
+        'subscribe_hide_list' => $subscribe_hide_list
       ]
     );
 })->name('youtube');

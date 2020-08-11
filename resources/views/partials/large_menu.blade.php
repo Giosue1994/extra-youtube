@@ -1,7 +1,7 @@
 <section id="menu">
   <div class="large-menu">
   <div class="section-menu home">
-    <ul>
+    <ul class="list-menu">
       <li class="active"><a href="{{ route('youtube') }}"><i class="fas fa-home"></i>Home</a></li>
       <li><a href="#"><i class="fas fa-fire"></i>Tendenze</a></li>
       <li><a href="#"><i class="fas fa-boxes"></i>Iscrizioni</a></li>
@@ -9,7 +9,7 @@
   </div>
 
   <div class="section-menu video">
-    <ul>
+    <ul class="list-menu">
       <li><a href="#"><i class="fas fa-layer-group"></i>Raccolta</a></li>
       <li><a href="#"><i class="fas fa-history"></i>Cronologia</a></li>
       <li><a href="#"><i class="far fa-play-circle"></i>I tuoi video</a></li>
@@ -21,7 +21,7 @@
 
   <div class="section-menu subscribe">
     <h4>ISCRIZIONI</h4>
-    <ul>
+    <ul class="list-menu">
       @foreach ($subscribe_list as $subscribe)
         <li>
           <a class="sub" href="#">
@@ -31,13 +31,26 @@
           </a>
         </li>
       @endforeach
-      <li class="show-others"><i class="fas fa-angle-down"></i>Mostra altri 90</li>
+      <li class="show-others"><i class="fas fa-angle-down"></i>Mostra altri @php echo count($subscribe_hide_list) @endphp</li>
+    </ul>
+    <ul class="hide-list list-menu">
+      @foreach ($subscribe_hide_list as $subscribe)
+        <li>
+          <a class="sub" href="#">
+            <img src="{{ $subscribe['profile-picture'] }}" alt="{{ $subscribe['name'] }}">
+            <span>{{ $subscribe['name'] }}</span>
+            <span class="online hidden"></span>
+          </a>
+        </li>
+      @endforeach
+      <li><a href="#"><i class="fas fa-plus-circle"></i>Sfoglia canali</a></li>
+      <li class="hide-others"><i class="fas fa-angle-up"></i>Mostra meno</li>
     </ul>
   </div>
 
   <div class="section-menu other">
     <h4>ALTRO DA YOUTUBE</h4>
-    <ul>
+    <ul class="list-menu">
       <li><a href="#"><i class="fab fa-youtube"></i>Youtube Premium</a></li>
       <li><a href="#"><i class="fas fa-film"></i>Film</a></li>
       <li><a href="#"><i class="fas fa-gamepad"></i>Videogiochi</a></li>
@@ -48,7 +61,7 @@
   </div>
 
   <div class="section-menu settings">
-    <ul>
+    <ul class="list-menu">
       <li><a href="#"><i class="fas fa-cog"></i>Impostazioni</a></li>
       <li><a href="#"><i class="fas fa-flag"></i>Cronologia segnalazioni</a></li>
       <li><a href="#"><i class="fas fa-question-circle"></i>Guida</a></li>

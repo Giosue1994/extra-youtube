@@ -1,3 +1,4 @@
+// ALIGN ELEMENT
 @mixin center_element {
   display: flex;
   justify-content: center;
@@ -9,8 +10,25 @@
   align-items: center;
 }
 
+// HIDDEN TEXT
 @mixin hidden_text {
   text-overflow: ellipsis;
   overflow: hidden;
   white-space: nowrap;
+}
+
+// BUTTONS
+@mixin click_button_style {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 0;
+  background: rgba(white, 0.1);
+  transition: 0.1s ease-in-out;
+  border-radius: 100%;
+}
+
+@mixin size_button_style {
+  width: 42px;
+  height: 42px;
 }
